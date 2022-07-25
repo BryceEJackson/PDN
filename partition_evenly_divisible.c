@@ -6,7 +6,6 @@
     a starting and ending index to add the numbers. This partition algorithm
     allocates the data among the threads evenly. 
 
-
 */
 typedef struct thread 
 {
@@ -52,3 +51,10 @@ int main(int argc, char *argv[])
     return 0; //return 0 on exit normal
 
 }
+
+/*
+    Next, create an implementation that works when 
+    size isn't evenly divisible by num_threads.
+
+
+*/
