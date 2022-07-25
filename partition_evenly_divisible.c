@@ -7,6 +7,11 @@
     allocates the data among the threads evenly. 
 
 */
+
+
+/*
+    thread struct to hold start and end indexes, and master flag
+*/
 typedef struct thread 
 {
     int start; 
@@ -37,12 +42,15 @@ int main(int argc, char *argv[])
         }
     }
 
+
+    // loop through and assign each thread their index bounds
     for(int i = 0; i < num_threads; i++)
     {
         (list+i)->start = min; 
         min+=batch_size;
         (list+i)->end = min;
 
+        // DEBUG: print the thread number and bounds for computation.
         printf("thread %d start: %d end: %d \n", i, (list+i)->start, (list+i)->end);
     }
 
@@ -55,6 +63,4 @@ int main(int argc, char *argv[])
 /*
     Next, create an implementation that works when 
     size isn't evenly divisible by num_threads.
-
-
 */
