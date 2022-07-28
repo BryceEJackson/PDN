@@ -10,6 +10,30 @@
 
 
 /*
+    int array[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+    sum_array(array[])
+    {
+        returns sum of all elements of the array
+    }
+
+    way 1) not parallel
+    
+    1+2+.....+10 = sum
+
+    way 2) parallel
+
+    1) 1 + 2  
+    2) 3 + 4
+    3) 5 + 6
+    4) 7 + 8
+    5) 9 + 10
+
+    then add for the final result
+
+*/
+
+/*
     thread struct to hold start and end indexes, and master flag
 */
 typedef struct thread 

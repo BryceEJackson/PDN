@@ -106,9 +106,43 @@ The Basics of Caching
 * Cache has different levels with different performance characteristics. 
 * L1, L2, L3, etc... are larger and slower as they go 
 * When the CPU needs access to data it checks L1 then L2, and so on, before checking main memory.
-
+* "a program will typically access a enarby location ( spatial locality ) in the near future ( temportal locality ). 
+* The system uses an effectively wider interconnect to access data and instructions. 
+* Memory will effectively operate on blocks of data and instructions instead of individual instructions and individual data items.
+* These blocks are called CHACHE BLOCKS or CAHCE LINES 
+* A typical cache line stores 8 to 16 times as much information as a single memory location. 
 #
 Cache Mappings
+
+* When a cache line is fetched from main memory, where in the cache should it be placed? 
+* The answer varies from system to system. 
+* There is a gradient, with Fully Associaltive caches at one end and Direct Mapped caches at the other. 
+* Intermediate schemes are called n-way set associative. 
+* When a new line is read to cache, we have to decide which line should be evicted. 
+* Least Recently Used is the most common approach. 
+
+#
+Caches and Programs: an example
+
+* CPU cache is controlled by system hardware. 
+* However, Knowing the principle of spatial and temporal locality allows us to have some indirect control over caching. 
+* As an example, C stores 2-dimensional arrays in "row-major" order. 
+* effectively, in memory the matrix is a one-dimensional array
+* this first pair of nested loops accesses memory in a contiguous way
+* becuase of that it will have better performance
+---
+
+for(i = 0; i < MAX; i++)<br>
+     for(j = 0; j < MAX; j++) <br>
+        y[i] += A[i][j] * x[j] <br.>
+
+for(j = 0; j < MAX; j++)<br>
+    for(i = 0; i < MAX; i++)<br>
+        y[i] += A[i][j] * x[j]<br>
+
+---
+
+#
 
 
 #
