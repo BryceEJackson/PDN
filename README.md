@@ -6,7 +6,7 @@ This repo contains coding practice and notes from:<br>"An Introduction to Parall
 by Peter S. Pacheco and Matthew Malensek
 
 #
-
+    CH. 1
 #
 Why we need ever-increasing performance: 
 * We've been enjoying the increases in computational power for decades.
@@ -66,6 +66,7 @@ PARALLEL: A program has multiple tasts cooperate to solve a problem. <br>
 DISTRIBUTED: A program may need to cooperate with another program to solve a problem.
 #
 
+ CH. 2
 
 #
  The Von Nueman Architecture
@@ -142,17 +143,26 @@ for(j = 0; j < MAX; j++)<br>
 
 ---
 
-#
-
-
-#
 Virtual Memory
-
-
+* Developed so that main memory could act as a cache for storage. 
+* it exploits spatial & temporal locality by keeping in main memory only the active parts of the many running programs. 
+* The idle parts can be kept in secondary storage in something called Swap Space. 
+* virtual memory blocks are often called pages. 
+* pages are relatively large. ( 4 - 16 kb)
+* When a program is compiled its pages are assigned virtual page numbers
+* When the page is run a table is created that maps the virtual page numbers to physical addresses. 
+* This is known as the PAGE TABLE
+* DRAWBACK: can double amount of time to access something in main memory
+* to address this, processors have a special address translation cache, called a translation-lookaside buffer
 #
 Instruction-level paralellism
 
+* ILP attempts to improve processor performance by having multiple processor components, or functional units,<br> simultaniously executing instructions. There are Two main types, both of which are used in virtually <br>every modern processor.
 
+1) pipelining
+
+2) multiple issue
+ 
 #
 Hardware Multithreading
 
