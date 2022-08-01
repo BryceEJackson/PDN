@@ -165,8 +165,9 @@ bolting a car's engine to the chassis, another is connecting the<br>
 transmission to the engine and the driveshaft of a car that's <br>
 already been processed by the first team, and a third team can bold<br> 
 the body to the chassis in a car thats been processed by the <br>first two teams. <br>
-As an example involving computation, suppose we want to add the floating<br> point numbers 9.87 x 10<sup>4</sup> and 6.54 x 10<sup>3</sup>. Then we can use the following steps. <br>
-<br> ![image](ch.2-pipelining-steps.PNG) <br>
+As an example involving computation, suppose we want to add the floating<br> point numbers 9.87 x 10<sup>4</sup> and 6.54 x 10<sup>3</sup>. Then we can use the following steps. 
+
+<br> ![image](ch.2-pipelining-steps.PNG)<br>
 <br> ![image](ch.2-pipelinedAddition.PNG) <br>
 <br> The above loop would perform serveral floating point additions.
 <br> We can make a piece of hardware for each operation,
