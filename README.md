@@ -65,9 +65,7 @@ CONCURRENT: a program has multiple tasks in progress at a time. <br>
 PARALLEL: A program has multiple tasts cooperate to solve a problem. <br>
 DISTRIBUTED: A program may need to cooperate with another program to solve a problem.
 #
-
- CH. 2
-
+    CH. 2
 #
  The Von Nueman Architecture
   * The Von Nueman Architecture consists of (1) main memory, <br>(2) a central-processing unit aka CPU, processor or core, (3) and an interconnect between the memory and the core.
@@ -155,13 +153,32 @@ Virtual Memory
 * DRAWBACK: can double amount of time to access something in main memory
 * to address this, processors have a special address translation cache, called a translation-lookaside buffer
 #
-Instruction-level paralellism
+**Instruction-level paralellism**
 
-* ILP attempts to improve processor performance by having multiple processor components, or functional units,<br> simultaniously executing instructions. There are Two main types, both of which are used in virtually <br>every modern processor.
+* **ILP** attempts to improve processor performance by having multiple processor components, or functional units,<br> simultaniously executing instructions. There are Two main types, both of which are used in virtually <br>every modern processor.
 
-1) pipelining
+**pipelining** : Piplelines improve performance by taking individual pieces of hardware or functional units and connecting them in sequence. 
 
-2) multiple issue
+<br>
+similar to a factory assembly line. While one team is<br> 
+bolting a car's engine to the chassis, another is connecting the<br> 
+transmission to the engine and the driveshaft of a car that's <br>
+already been processed by the first team, and a third team can bold<br> 
+the body to the chassis in a car thats been processed by the <br>first two teams. <br>
+As an example involving computation, suppose we want to add the floating<br> point numbers 9.87 x 10<sup>4</sup> and 6.54 x 10<sup>3</sup>. Then we can use the following steps. <br>
+<br> ![image](ch.2-pipelining-steps.PNG) <br>
+<br> ![image](ch.2-pipelinedAddition.PNG) <br>
+<br> The above loop would perform serveral floating point additions.
+<br> We can make a piece of hardware for each operation,
+<br> and allow each step to be done simultaniously.
+<br> For the 1000 elements, if each operation takes one nanosecond 
+<br> then this would take 7000 nanoseconds to compute in serial. 
+<br> If each step has a hardware component, then it would only take
+<br> 1006 nanoseconds, because each component can do their next step
+<br> while the next component is processing. 
+<br>
+
+2) **multiple issue** : 
  
 #
 Hardware Multithreading
